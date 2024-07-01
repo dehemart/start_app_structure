@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:start_app_structure/app/constants/app_constants.dart';
+import 'package:start_app_structure/app/pages/layout/widgets/menu/menu_app.dart';
 
-class LayoutApp extends StatefulWidget {
+class LayoutApp extends StatelessWidget {
   final Widget child;
   const LayoutApp({super.key, required this.child});
 
-  @override
-  State<LayoutApp> createState() => _LayoutAppState();
-}
-
-class _LayoutAppState extends State<LayoutApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppConstants.appTitle),
       ),
-      body: widget.child,
+      body: Expanded(
+        child: Container(
+          child: child,
+        ),
+      ),
+      drawer: const MenuApp(),
     );
   }
 }
