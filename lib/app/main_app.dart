@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:start_app_structure/app/constants/app_constants.dart';
+import 'package:start_app_structure/app/themes/theme_app.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: AppConstants.appTitle,
+      themeMode: ThemeMode.dark,
+      theme: ThemeApp.lightThemeData,
+      darkTheme: ThemeApp.darkThemeData,
+    );
   }
 }
