@@ -20,11 +20,13 @@ class RouteApp {
             },
             routes: [
               GoRoute(
+                name: RoutesConstants.homeRouteName,
                 path: RoutesConstants.homeRoutePath,
                 builder: (context, state) => const HomePage(),
               ),
               GoRoute(
-                path: RoutesConstants.settingsRouteName,
+                name: RoutesConstants.settingsRouteName,
+                path: RoutesConstants.settingsRoutePath,
                 builder: (context, state) => const SettingsPage(),
               ),
             ],
